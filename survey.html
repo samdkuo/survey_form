@@ -2,22 +2,24 @@
 <html>
     <head>
         <title>survey</title>
+        <link rel="stylesheet" type="text/css" href="survey.css">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1 id="title">Which pets do you own?</h1>
-        <p id="description">Finding out which type of pet is most popular</p>
+        <h1 id="title">which pets do you own?</h1>
+        <p id="description">finding out which type of pet is most popular</p>
     
         <form id="survey-form">
-            <label id="name-label">name:</label>
+            <label id="name-label">Name:</label>
             <input id="name" type="text" required placeholder="John Doe">
 
-            <label id="email-label">email:</label>
+            <label id="email-label">Email:</label>
             <input id="email" type="email" required placeholder="test@123.com">
 
-            <label id="number-label">age:</label>
+            <label id="number-label">Age:</label>
             <input id="number" type="number" required min=5 max=100 placeholder="20">
 
-            <label id="dropdown-label">ethnicity:</label>
+            <label id="dropdown-label">Ethnicity:</label>
             <select id="dropdown">
                 <option>American Indian or Alaska Native</option>
                 <option>Asian</option>
@@ -27,25 +29,37 @@
                 <option>White</option>
             </select>
 
-            <label>gender:</label>
-            <input type="radio" name="gender" value="female">
-            <label for="female">Female</label>
-            <input type="radio" name="gender" value="male">
-            <label for="male">Male</label>
+            <label>Gender:</label>
+            <label class="gender" for="female">
+                    <input type="radio" name="gender" value="female">
+                    Female</label>
+            <label class="gender" for="male">
+                    <input type="radio" name="gender" value="male">
+                    Male</label>
 
-            <label>types of pets:</label>
-            <input type="checkbox" value="cat">
-            <label for="cat">Cat</label>
-            <input type="checkbox" value="dog">
-            <label for="dog">Dog</label>
-            <input type="checkbox" value="bird">
-            <label for="bird">Bird</label>
-            <input type="checkbox" value="fish">
-            <label for="fish">Fish</label>
-            <input type="checkbox" value="reptile">
-            <label for="reptile">Reptile</label>
+            <label>Types of pets:</label>
+            <label class="pets" for="cat">
+                <input type="checkbox" value="cat">
+                Cat
+            </label>
+            <label class="pets" for="dog">
+                <input type="checkbox" value="dog">
+                Dog
+            </label>
+            <label class="pets" for="bird">
+                <input type="checkbox" value="bird">
+                Bird
+            </label>
+            <label class="pets" for="fish">
+                <input type="checkbox" value="fish">
+                Fish
+            </label>
+            <label class="pets" for="reptile">
+                <input type="checkbox" value="reptile">
+                Reptile
+            </label>
 
-            <label>additional comments:</label>
+            <label>Additional Comments:</label>
             <textarea rows="3" cols="30"></textarea>
 
             <button id="submit" type="submit">submit</button>
